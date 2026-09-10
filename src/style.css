@@ -1,0 +1,55 @@
+/* src/style.css — Tailwind v4 用户（推荐） */
+/* 顺序固定：先 Tailwind 工具类，再 fuxsto-design 主题令牌 */
+@import "tailwindcss";
+@import "fuxsto-design/styles";
+
+/* 强制 Tailwind 扫描本项目所有源（含 router 动态 import 的页面/布局） */
+@source "../**/*.{vue,ts,tsx,js,jsx}";
+@source "./**/*.{vue,ts,tsx,js,jsx}";
+
+/* 全局基调（仅本页所需的几个微调） */
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 130, 0.3);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 130, 0.5);
+}
+
+/* 简单的行截断工具类 */
+.fx-line-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.fx-line-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

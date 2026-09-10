@@ -1,0 +1,49 @@
+# --- dependencies -----------------------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+
+# --- build output ----------------------------------------------------------
+dist/
+dist-ssr/
+*.local
+
+# --- bundler caches --------------------------------------------------------
+.vite/
+.vite-inspect/
+
+# --- logs ------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- environment files -----------------------------------------------------
+# Never commit real credentials. Keep a committed .env.example as the template.
+.env
+.env.*
+!.env.example
+
+# --- editor / OS -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- TypeScript ------------------------------------------------------------
+*.tsbuildinfo
+
+# --- tests / coverage ------------------------------------------------------
+coverage/
+
+# --- tooling workspace -----------------------------------------------------
+# Local AI-assistant working data (memory + caches). Internal, not template content.
+.workbuddy/

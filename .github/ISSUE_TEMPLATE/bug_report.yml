@@ -1,0 +1,75 @@
+name: Bug report
+description: Report something that is broken in the template
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please fill in as much detail as you can —
+        a minimal reproduction is the fastest path to a fix.
+
+        Before opening, please run `npm run verify` and paste the output if it fails.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug, including what you expected instead.
+      placeholder: When I open /dashboard on a 375px viewport, the carousel ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps. Include the route and viewport width if the issue is visual.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: input
+    id: route
+    attributes:
+      label: Affected route
+      placeholder: "/dashboard"
+    validations:
+      required: false
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console / terminal output
+      description: Paste any Vue warnings, type errors or stack traces. Rendered as code, no backticks needed.
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Output of `node -v`, plus the fuxsto-design / Vue / Vite versions from package.json.
+      placeholder: "node v22.18.0 · fuxsto-design 0.2.0 · vue 3.5.x · vite 6.x"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the template does this affect?
+      multiple: true
+      options:
+        - Layout / responsive
+        - A specific page
+        - Component usage
+        - Build / tooling
+        - Documentation
+        - Other
+    validations:
+      required: true

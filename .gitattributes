@@ -1,0 +1,29 @@
+# Normalise everything to LF in the repository, regardless of the contributor's OS.
+# Prevents the whole-file "changed" noise you get when a Windows clone with
+# core.autocrlf=true meets a Linux CI runner.
+* text=auto eol=lf
+
+# Explicit text types
+*.md      text
+*.json    text
+*.yml     text
+*.yaml    text
+*.ts      text
+*.vue     text
+*.cjs     text
+*.css     text
+*.html    text
+*.svg     text
+
+# Binary — never touch
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.webp    binary
+*.woff    binary
+*.woff2   binary
+
+# Keep lockfiles stable and reviewable
+package-lock.json  -diff linguist-generated

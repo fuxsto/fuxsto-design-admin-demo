@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / usage help
+    url: https://github.com/fuxsto/fuxsto-design-admin-demo/discussions
+    about: Ask how to use, extend or deploy the template.
+  - name: fuxsto-design component reference
+    url: https://design.fuxsto.cn
+    about: Props, events and slots for every component used by this template.

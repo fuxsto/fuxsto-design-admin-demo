@@ -1,0 +1,50 @@
+name: Feature request
+description: Suggest a new page, component demo, or improvement
+title: "[Feature] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. The most useful requests describe the **problem**, not just the solution.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: What are you trying to build that the template makes hard today?
+      placeholder: I want to build a billing page, but the template has no example of ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Sketch the API, page, or component demo you have in mind.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - New page demo
+        - New component demo on an existing page
+        - Improves an existing page
+        - Tooling / audit script
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Template constraints
+      description: This template deliberately keeps to a few hard rules. Please confirm your proposal respects them.
+      options:
+        - label: It only uses components that exist in fuxsto-design (no new UI dependency).
+        - label: It works down to a 375px viewport.
+        - label: It does not pass `class`/`style` to Fragment-root components (Image · Table · Pagination · Slider).
